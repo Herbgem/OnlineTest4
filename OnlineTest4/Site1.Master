@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="OnlineTest4.Site1" %>
+
+<%@ Register Src="~/CustomUserControl/HeaderUC.ascx" TagPrefix="uc1" TagName="HeaderUC" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <uc1:HeaderUC runat="server" ID="HeaderUC" />
+    <asp:ContentPlaceHolder ID="HeaderRegion" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="ContentRegion" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>
