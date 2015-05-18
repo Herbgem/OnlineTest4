@@ -4,7 +4,7 @@
 <link href="Content/bootstrap-theme.css" rel="stylesheet" />
 <link href="CssStyle/Global.css" rel="stylesheet" />
 
-<div id="LeftSideBar" CssClass="borderStyle leftSideBarStyle" runat="server">
+<div id="LeftSideBar" class="borderStyle leftSideBarStyle" runat="server">
     <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" /> 
     <ul class="nav navbar-default" id="LeftMapList" runat="server">
         <li class="active"><asp:HyperLink ID="ViewUsersDetails" Text="View Users' Details" runat="server" NavigateUrl="~/UsersDetails.aspx" /></li>

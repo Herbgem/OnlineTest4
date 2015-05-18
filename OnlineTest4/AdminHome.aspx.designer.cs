@@ -11,5 +11,14 @@ namespace OnlineTest4 {
     
     
     public partial class WebForm3 {
+        
+        /// <summary>
+        /// AdminLeftSideBar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OnlineTest4.CustomUserControl.AdminLeftSideBar AdminLeftSideBar;
     }
 }

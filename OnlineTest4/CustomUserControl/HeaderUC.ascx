@@ -48,7 +48,7 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#">LogOut</a></li>
+                      <li><a href="#" id="lnkLogOut" runat="server" onclick="OnClick_LogOut" visible="false">Log out</a></li>
                     </ul>
 
                 </div>

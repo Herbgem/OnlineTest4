@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Home.aspx" title="Home"  description="Home Page">
+    <siteMapNode url="Login.aspx" title="Login"  description="Login Page" />
+    <siteMapNode url="Register.aspx" title="Register"  description="Register Page" />
+    <siteMapNode url="AdminHome.aspx" title="Admin Home" description="Users Management">
+      <siteMapNode url="/UsersDetails.aspx" title="User Details" description="View all users"/>
+      <siteMapNode url="/UserTests.aspx" title="User Tests" description="View Tests taken by users"/>
+      <siteMapNode url="/ViewTestResults.aspx" title="Test Results" description="View Test Results" />
+    </siteMapNode>
+    <siteMapNode url="#" title="Subjects Management" description="Subjects Management">
+      <siteMapNode url="Subjects.aspx" title="Subjects" description="View Subjects"/>
+      <siteMapNode url="TestPaper.aspx" title="Test Paper" description="Test Paper Management"/>
+    </siteMapNode>
+
+  </siteMapNode>
+</siteMap>
