@@ -59,6 +59,17 @@
   <ItemGroup>
     <Content Include="Site1.Master" />
     <Content Include="App_Themes\Theme1\Skin1.skin" />
+    <Content Include="Models\UsersDb.xsc">
+      <DependentUpon>UsersDb.xsd</DependentUpon>
+    </Content>
+    <None Include="Models\UsersDb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UsersDb.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Models\UsersDb.xss">
+      <DependentUpon>UsersDb.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -133,6 +144,11 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\UsersDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersDb.xsd</DependentUpon>
+    </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,7 +187,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
