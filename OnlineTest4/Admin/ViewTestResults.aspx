@@ -8,12 +8,10 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentRegion" runat="server">
     <uc1:AdminLeftSideBar runat="server" ID="AdminLeftSideBar" />
-    <form runat="server">
             <asp:GridView ID="gvUsers" runat="server" AllowPaging="true" PageSize="8" 
                       CssClass="Grid" AlternatingRowStyle-CssClass="alt"
                       PagerStyle-CssClass="pgr">
             </asp:GridView>
             <br /><br />
 
-        </form>
 </asp:Content>

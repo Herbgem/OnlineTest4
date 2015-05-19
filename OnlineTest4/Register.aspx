@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="HeaderRegion" runat="server">
-    <form id="formRegister" runat="server">
         <div id="LoginRegion" style="position:relative; display:table; margin:50px auto">
             <label id="lblUserName">User Name:</label>
             &nbsp;&nbsp;
@@ -39,7 +38,6 @@
             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click"/>
             <br />
         </div>
-    </form>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentRegion" runat="server">
 </asp:Content>

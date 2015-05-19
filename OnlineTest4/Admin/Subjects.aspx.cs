@@ -13,6 +13,7 @@ namespace OnlineTest4
     {
         Models.UsersDb ds;
         SqlDataAdapter da;
+        SqlDataAdapter daTestPaper;
         SqlCommandBuilder sc;
 
         public WebForm8()
@@ -21,8 +22,12 @@ namespace OnlineTest4
             da = new SqlDataAdapter(
                 string.Format("select * from {0}", ds.Subjects.TableName),
                 System.Web.Configuration.WebConfigurationManager.ConnectionStrings["UsersDbConnectionString"].ConnectionString);
+            daTestPaper = new SqlDataAdapter(
+                string.Format("select * from {0}", ds.TestPaper.TableName),
+                System.Web.Configuration.WebConfigurationManager.ConnectionStrings["UsersDbConnectionString"].ConnectionString);
             sc = new SqlCommandBuilder(da);
             da.Fill(ds, ds.Subjects.TableName);
+            daTestPaper.Fill(ds, ds.TestPaper.TableName);
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -90,6 +95,13 @@ namespace OnlineTest4
 
             gvUsers.DataSource = ds.Subjects;
             gvUsers.DataBind();
+        }
+
+        protected void gvUsers_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            int subjectId = Convert.ToInt32(gvUsers.DataKeys[e.NewSelectedIndex].Value);
+            dvQuizRecord.DataSource = ds.TestPaper.Rows.Cast<DataRow>().Where(ant => Convert.ToInt32(ant[ds.TestPaper.SubjectIdColumn.ColumnName]) == subjectId);
+            dvQuizRecord.DataBind();
         }
     }
 }

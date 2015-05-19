@@ -49,15 +49,6 @@ namespace OnlineTest4 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl UserOPS;
         
         /// <summary>
-        /// TestOPS control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TestOPS;
-        
-        /// <summary>
         /// hlAboutUs control.
         /// </summary>
         /// <remarks>
@@ -67,12 +58,21 @@ namespace OnlineTest4 {
         protected global::System.Web.UI.WebControls.HyperLink hlAboutUs;
         
         /// <summary>
-        /// lnkLogOut control.
+        /// TestOPS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkLogOut;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TestOPS;
+        
+        /// <summary>
+        /// lnkLogOut1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkLogOut1;
     }
 }

@@ -62,10 +62,12 @@
     <Content Include="Models\UsersDb.xsc">
       <DependentUpon>UsersDb.xsd</DependentUpon>
     </Content>
-    <Content Include="AdminHome.aspx" />
-    <Content Include="UsersDetails.aspx" />
-    <Content Include="ViewTestResults.aspx" />
-    <Content Include="Subjects.aspx" />
+    <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\UsersDetails.aspx" />
+    <Content Include="Admin\ViewTestResults.aspx" />
+    <Content Include="Admin\Subjects.aspx" />
+    <Content Include="Admin\UserTests.aspx" />
+    <Content Include="Admin\Web.config" />
     <None Include="Models\UsersDb.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -100,6 +102,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="NewFolder1\WebForm10.aspx" />
+    <Content Include="WebForm11.aspx" />
     <Content Include="WebForm2.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
@@ -153,6 +157,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UsersDb.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NewFolder1\WebForm10.aspx.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\WebForm10.aspx.designer.cs">
+      <DependentUpon>WebForm10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm11.aspx.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm11.aspx.designer.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -174,36 +192,44 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminHome.aspx.cs">
+    <Compile Include="Admin\AdminHome.aspx.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminHome.aspx.designer.cs">
+    <Compile Include="Admin\AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UsersDetails.aspx.cs">
+    <Compile Include="Admin\UsersDetails.aspx.cs">
       <DependentUpon>UsersDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UsersDetails.aspx.designer.cs">
+    <Compile Include="Admin\UsersDetails.aspx.designer.cs">
       <DependentUpon>UsersDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewTestResults.aspx.cs">
+    <Compile Include="Admin\ViewTestResults.aspx.cs">
       <DependentUpon>ViewTestResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewTestResults.aspx.designer.cs">
+    <Compile Include="Admin\ViewTestResults.aspx.designer.cs">
       <DependentUpon>ViewTestResults.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Subjects.aspx.cs">
+    <Compile Include="Admin\Subjects.aspx.cs">
       <DependentUpon>Subjects.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Subjects.aspx.designer.cs">
+    <Compile Include="Admin\Subjects.aspx.designer.cs">
       <DependentUpon>Subjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserTests.aspx.cs">
+      <DependentUpon>UserTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserTests.aspx.designer.cs">
+      <DependentUpon>UserTests.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Account\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>

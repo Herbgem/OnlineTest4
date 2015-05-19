@@ -35,7 +35,7 @@ namespace OnlineTest4
             if (ds.Tables[ds.UserProfiles.TableName].Rows.Count != 0)
             {
                 Models.UserInfo.UserName = ds.Tables[ds.UserProfiles.TableName].Rows[0][ds.UserProfiles.UserNameColumn.ColumnName].ToString();
-                Response.RedirectPermanent("AdminHome.aspx");
+                Response.RedirectPermanent("/Admin/AdminHome.aspx");
                 Session["UserName"] = "admin";
             }
             else

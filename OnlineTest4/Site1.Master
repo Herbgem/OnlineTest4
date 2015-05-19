@@ -12,6 +12,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <form runat="server">
     <uc1:HeaderUC runat="server" ID="HeaderUC" />
 
     <div style="position:relative; width:100%; margin-left:20px;">
@@ -27,6 +28,6 @@
     <asp:ContentPlaceHolder ID="ContentRegion" runat="server">
 
     </asp:ContentPlaceHolder>
-
+    </form>
 </body>
 </html>

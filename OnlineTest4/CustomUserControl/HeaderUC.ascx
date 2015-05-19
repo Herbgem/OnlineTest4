@@ -1,13 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HeaderUC.ascx.cs" Inherits="OnlineTest4.WebUserControl1" %>
-<script src="Scripts/jquery-1.9.1.js"></script>
-<script src="Scripts/bootstrap.js"></script>
-<link href="Content/bootstrap.css" rel="stylesheet" />
-<link href="Content/bootstrap-theme.css" rel="stylesheet" />
+<script src="/Scripts/jquery-1.9.1.js"></script>
+<script src="/Scripts/bootstrap.js"></script>
+<link href="/Content/bootstrap.css" rel="stylesheet" />
+<link href="/Content/bootstrap-theme.css" rel="stylesheet" />
 
 <header id="HeaderDefault">
     <div id="navbar">
         <div id="nav-belt">
-            <img src="ImgHeader2.jpg" style="height:100px; width:100%"/>
+            <img src="/ImgHeader2.jpg" style="height:100px; width:100%"/>
         </div>
         <div id="nav-main">
 
@@ -32,6 +32,8 @@
                             </ul>
                         </li>
 
+                        <li><asp:HyperLink ID="hlAboutUs" runat="server" Text="About Us" /></li>
+
                         <li class="dropdown" id="TestOPS" runat="server" visible="false">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Test OPS <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
@@ -44,13 +46,22 @@
                             </ul>
                         </li>
 
-                        <li><asp:HyperLink ID="hlAboutUs" runat="server" Text="About Us" /></li>
+                        
                     </ul>
+
+
 
                     <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#" id="lnkLogOut" runat="server" onclick="OnClick_LogOut" visible="false">Log out</a></li>
+                      <li class="dropdown" id="ddTheme">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Theme<span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                              
+                          </ul>
+                      </li>
+                      <li>
+                          <asp:LinkButton ID="lnkLogOut1" runat="server" Visible="false" OnClick="lnkLogOut1_Click" Text="Log out" />
+                      </li>
                     </ul>
-
                 </div>
             </nav>
         </div>

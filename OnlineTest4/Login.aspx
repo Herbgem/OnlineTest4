@@ -6,7 +6,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="HeaderRegion" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentRegion" runat="server">
-    <form id="formLogin" runat="server">
         <div id="LoginRegion" style="position:relative; margin:50px auto; display:table">
             <label id="lblUserName">User Name:</label>
             &nbsp;&nbsp;
@@ -25,5 +24,4 @@
             <br />
             <asp:Label ID="lblWarning" runat="server" ForeColor="Red"/>
         </div>
-    </form>
 </asp:Content>

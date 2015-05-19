@@ -9,13 +9,13 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentRegion" runat="server">
     <uc1:AdminLeftSideBar runat="server" ID="AdminLeftSideBar" />
 
-    <form runat="server">
             <asp:GridView ID="gvUsers" runat="server" AllowPaging="true" PageSize="2" 
                       CssClass="Grid" AlternatingRowStyle-CssClass="alt"
                       PagerStyle-CssClass="pgr" ShowFooter="true" AutoGenerateColumns="false"
                       OnRowCommand="gvUsers_RowCommand" OnRowCancelingEdit="gvUsers_RowCancelingEdit"
                       OnRowUpdating="gvUsers_RowUpdating" OnRowDeleting="gvUsers_RowDeleting"
-                      OnRowEditing="gvUsers_RowEditing" OnPageIndexChanging="gvUsers_PageIndexChanging"
+                      OnRowEditing="gvUsers_RowEditing" OnSelectedIndexChanging="gvUsers_SelectedIndexChanging" 
+                      OnPageIndexChanging="gvUsers_PageIndexChanging"
                       DataKeyNames="SubjectId">
                 <Columns>
                     <asp:TemplateField HeaderText="Select">
@@ -26,6 +26,7 @@
                         <ItemTemplate>
                             <asp:LinkButton ID="lnkDelete" runat="server" Text="Delete" CommandName="Delete" />
                             <asp:LinkButton ID="lnkEdit" runat="server" Text="Edit" CommandName="Edit" />
+                            <asp:LinkButton ID="lnkSelect" runat="server" Text="Select" CommandName="Select" />
                         </ItemTemplate>
 
                         <EditItemTemplate>
@@ -72,6 +73,22 @@
             </asp:GridView>
             <br /><br />
         <asp:ValidationSummary ValidationGroup ="NewSubjectGroup" runat="server" Font-Size="Large" ForeColor="Red" CssClass="centerText"/>
-            
-        </form>
+            <div>
+                <asp:GridView CssClass="Grid" AlternatingRowStyle-CssClass="alt" runat="server" ID="dvQuizRecord" 
+                    AutoGenerateEditButton="True" HorizontalAlign="Center" 
+                    AutoGenerateColumns="False" DataKeyNames="ID">
+                    <AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
+                    <Columns>
+                        <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                        <asp:BoundField DataField="Question" HeaderText="Question" SortExpression="Question" />
+                        <asp:BoundField DataField="Option1" HeaderText="Option1" SortExpression="Option1" />
+                        <asp:BoundField DataField="Option2" HeaderText="Option2" SortExpression="Option2" />
+                        <asp:BoundField DataField="Option3" HeaderText="Option3" SortExpression="Option3" />
+                        <asp:BoundField DataField="Option4" HeaderText="Option4" SortExpression="Option4" />
+                        <asp:BoundField DataField="Answer" HeaderText="Answer" SortExpression="Answer" />
+                        <asp:BoundField DataField="SubjectId" HeaderText="SubjectId" SortExpression="SubjectId" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UsersDbConnectionString2 %>" SelectCommand="SELECT * FROM [TestPaper]"></asp:SqlDataSource>
+            </div>
 </asp:Content>

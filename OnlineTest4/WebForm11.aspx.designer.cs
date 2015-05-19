@@ -10,24 +10,24 @@
 namespace OnlineTest4 {
     
     
-    public partial class WebForm8 {
+    public partial class WebForm11 {
         
         /// <summary>
-        /// AdminLeftSideBar control.
+        /// sqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OnlineTest4.CustomUserControl.AdminLeftSideBar AdminLeftSideBar;
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlDataSource1;
         
         /// <summary>
-        /// gvUsers control.
+        /// customGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvUsers;
+        protected global::System.Web.UI.WebControls.GridView customGridView;
     }
 }

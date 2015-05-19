@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Security;
 
 namespace OnlineTest4
 {
@@ -18,22 +19,18 @@ namespace OnlineTest4
                     this.TestOPS.Visible = true;
                     this.UserOPS.Visible = true;
                 }
-                this.lnkLogOut.Visible = true;
+                this.lnkLogOut1.Visible = true;
                 this.hlLogin.Visible = false;
                 this.hlRegister.Visible = false;
             }
         }
 
-        protected void OnClick_LogOut(object sender, EventArgs e)
+        protected void lnkLogOut1_Click(object sender, EventArgs e)
         {
-
+            Session.Abandon();
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
         }
-
-        protected void Unnamed_Click(object sender, EventArgs e)
-        {
-
-        }
-
         
     }
 }

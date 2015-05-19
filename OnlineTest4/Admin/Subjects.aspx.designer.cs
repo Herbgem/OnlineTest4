@@ -10,42 +10,42 @@
 namespace OnlineTest4 {
     
     
-    public partial class WebForm4 {
+    public partial class WebForm8 {
         
         /// <summary>
-        /// txtUserName control.
+        /// AdminLeftSideBar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserName;
+        protected global::OnlineTest4.CustomUserControl.AdminLeftSideBar AdminLeftSideBar;
         
         /// <summary>
-        /// txtPassword control.
+        /// gvUsers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.WebControls.GridView gvUsers;
         
         /// <summary>
-        /// btnLogin control.
+        /// dvQuizRecord control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.WebControls.GridView dvQuizRecord;
         
         /// <summary>
-        /// lblWarning control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWarning;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }
