@@ -13,6 +13,15 @@ namespace OnlineTest4 {
     public partial class WebUserControl1 {
         
         /// <summary>
+        /// liHome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liHome;
+        
+        /// <summary>
         /// hlHome control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace OnlineTest4 {
         protected global::System.Web.UI.WebControls.HyperLink hlHome;
         
         /// <summary>
+        /// liLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liLogin;
+        
+        /// <summary>
         /// hlLogin control.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,15 @@ namespace OnlineTest4 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hlLogin;
+        
+        /// <summary>
+        /// liRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liRegister;
         
         /// <summary>
         /// hlRegister control.
@@ -49,6 +76,15 @@ namespace OnlineTest4 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl UserOPS;
         
         /// <summary>
+        /// TestOPS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TestOPS;
+        
+        /// <summary>
         /// hlAboutUs control.
         /// </summary>
         /// <remarks>
@@ -58,13 +94,13 @@ namespace OnlineTest4 {
         protected global::System.Web.UI.WebControls.HyperLink hlAboutUs;
         
         /// <summary>
-        /// TestOPS control.
+        /// ddTheme control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TestOPS;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ddTheme;
         
         /// <summary>
         /// lnkLogOut1 control.

@@ -19,9 +19,43 @@ namespace OnlineTest4
                     this.TestOPS.Visible = true;
                     this.UserOPS.Visible = true;
                 }
+                this.ddTheme.Visible = true;
                 this.lnkLogOut1.Visible = true;
                 this.hlLogin.Visible = false;
                 this.hlRegister.Visible = false;
+            }
+
+            string path = Request.Url.AbsolutePath;
+            string fileName = System.IO.Path.GetFileNameWithoutExtension(path);
+
+            switch (fileName.ToLower())
+            {
+                case("home"):
+                    liHome.Attributes.Add("class", "active");
+                    break;
+                case("login"):
+                    liLogin.Attributes.Add("class", "active");
+                    break;
+                case("register"):
+                    liRegister.Attributes.Add("class", "active");
+                    break;
+                case("usersdetails"):
+                    UserOPS.Attributes.Add("class", "active");
+                    break;
+                case("viewtestresults"):
+                    UserOPS.Attributes.Add("class", "active");
+                    break;
+                case("usertests"):
+                    UserOPS.Attributes.Add("class", "active");
+                    break;
+                case("subjects"):
+                    TestOPS.Attributes.Add("class", "active");
+                    break;
+                case("testpaper"):
+                    TestOPS.Attributes.Add("class", "active");
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -31,6 +65,5 @@ namespace OnlineTest4
             FormsAuthentication.SignOut();
             FormsAuthentication.RedirectToLoginPage();
         }
-        
     }
 }

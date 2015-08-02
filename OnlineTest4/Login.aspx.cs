@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.Security;
 
 namespace OnlineTest4
 {
@@ -34,9 +35,30 @@ namespace OnlineTest4
 
             if (ds.Tables[ds.UserProfiles.TableName].Rows.Count != 0)
             {
-                Models.UserInfo.UserName = ds.Tables[ds.UserProfiles.TableName].Rows[0][ds.UserProfiles.UserNameColumn.ColumnName].ToString();
-                Response.RedirectPermanent("/Admin/AdminHome.aspx");
-                Session["UserName"] = "admin";
+
+                if (txtUserName.Text == "admin")
+                {
+                    Session["UserName"] = "admin";
+                    FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1, txtUserName.Text, DateTime.Now, DateTime.Now.AddMinutes(30), false, FormsAuthentication.FormsCookiePath);
+                    string hash = FormsAuthentication.Encrypt(ticket);
+                    HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, hash);
+
+                    Response.Write(cookie.Path);
+
+                    if (ticket.IsPersistent)
+                    {
+                        cookie.Expires = ticket.Expiration;
+                    }
+                    Response.Cookies.Add(cookie);
+                    string returnUrl = Request.QueryString["ReturnUrl"];
+
+                    if (returnUrl == null)
+                    {
+                        returnUrl = "~/Admin/AdminHome.aspx";
+                    }
+
+                    Response.RedirectPermanent(returnUrl);
+                }
             }
             else
             {
